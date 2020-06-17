@@ -14,11 +14,18 @@ export default class Paddle {
     _yVel = {};
 
     constructor() {
-
+        let canvas = document.getElementById("canvas");
+        let thePaddles = canvas.getContext("2d");
+        paddles();
         // create instances of the parts
+        function paddles() {
+            thePaddles.fillRect(75, 150, 25, 150);
+            thePaddles.fillRect(565, 150, 25, 150);
+            thePaddles.fillStyle = "skyblue";
+        }
 
         // Making sure I did things right
-        console.log("Paddles done... maybe")
+        console.log("Paddles done... maybe");
     }
 
     // position the parts on the canvas
